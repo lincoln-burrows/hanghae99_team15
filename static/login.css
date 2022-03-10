@@ -1,0 +1,42 @@
+
+body {
+    background-color: #F3E6A2FF;
+    min-height: 100vh;
+}
+
+.section {
+    padding: 1rem 1.5rem;
+    max-width: 750px;
+    margin: auto;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 5rem;
+     font-family: 'Nanum Pen Script', cursive;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.is-sparta {
+    color: #f59d51 !important;
+}
+
+.button.is-sparta {
+    background-color: #f59d51;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.button.is-sparta.is-outlined {
+    background-color: transparent;
+    border-color: #f59d51;
+    color: #f59d51 !important;
+}
+
+.help {
+    color: gray;
+}

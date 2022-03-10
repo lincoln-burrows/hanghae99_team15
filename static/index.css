@@ -1,0 +1,222 @@
+body {
+    background-color: #f3e6a2ff;
+    min-height: 100vh;
+    padding-top: 3.25rem;
+    font-family: Helvetica, sans-serif;
+    max-width: 100%;
+}
+
+.section {
+    padding: 1rem 1.5rem;
+    max-width: 750px;
+    margin: auto;
+
+}
+
+.postsection {
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+    margin: auto;
+}
+
+.is-sparta {
+    color: #f59d51 !important;
+}
+
+.button.is-sparta {
+    background-color: #f59d51;
+    border-color: transparent;
+    color: #ffffff !important;
+}
+
+.button.is-sparta.is-outlined {
+    background-color: transparent;
+    border-color: #f59d51;
+    color: #f59d51 !important;
+}
+
+.modal-content {
+    width: 600px;
+    max-width: 80%;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.card-columns {
+    width: 1200px;
+    margin: auto;
+}
+
+.card-deck {
+    display: block;
+    padding: 25px;
+    width: 400px;
+    margin: auto;
+}
+
+.card-body {
+    height: 200px;
+}
+
+.card-text {
+    height: 80px;
+}
+
+.card-link {
+    margin-left: auto;
+
+}
+
+
+.title {
+    font-weight: 800;
+    font-size: 5rem;
+     font-family: 'Nanum Pen Script', cursive;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+/*검색창 css*/
+:root {
+    --dark-color: #232323;
+    --light-color: #F4F4F4;
+
+/*
+    Feel free to change the variable '--circle-size' in order to scale circle and search-bar with absolute and relative units ^-^
+*/
+    --circle-size: 70px;
+    --circle-color: var(--light-color);
+
+    --input-height: calc(var(--circle-size) * .6);
+    --input-placeholder-color: hsl(0, 0%, 74%);
+/*
+    Change --input-width scalability if You think that the width of search-bar is too large/small :D
+*/
+    --input-width: calc(var(--circle-size) * 2);
+    --input-color: hsl(226, 45%, 43%);
+
+    --cross-size: calc(var(--circle-size) * .3);
+    --cross-color: hsl(0, 0%, 27%);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.align-center {
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    transform: translate(-50%, -50%);
+}
+.search-container > input[type='checkbox'] {
+    display: none;
+}
+.search-container input[type="checkbox"]:checked ~ label[for="search-trigger"] div {
+    margin-left: calc(var(--input-width) * .5);
+}
+.search-container input[type="checkbox"]:checked ~ .search-field input[type="text"] {
+    width: var(--input-width);
+}
+.search-container input[type="checkbox"]:checked ~ .search-field {
+    margin-right: calc(var(--input-width) * -.5);
+}
+.search-container input[type="checkbox"]:checked ~ label .search-toggle::before {
+    top: 48%;
+    left: 50%;
+    height: calc(var(--cross-size) / 5);
+    width: calc(var(--cross-size) * 2);
+    transform: translateX(-50%) rotate(-47deg);
+    border-radius: calc(var(--cross-size) * .1);
+}
+.search-container input[type="checkbox"]:checked ~ label .search-toggle::after {
+    top: 21%;
+    left: 50%;
+    height: calc(var(--cross-size) * 2);
+    transform: translateX(-50%) rotate(-43deg);
+}
+.search-container > label[for='search-trigger'] > div {
+    position: absolute;
+    top: 50%;
+    margin-left: calc(var(--input-height) * -.5);
+    transform: translateY(-50%);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background-color: #f2974c ;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: margin 650ms ease;
+}
+.search-container > label[for='search-trigger'] > div::before,
+.search-container > label[for='search-trigger'] > div::after {
+    content: '';
+    position: absolute;
+}
+.search-container .search-field {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: margin 500ms ease;
+}
+.search-container input[type="text"] {
+    height: var(--input-height);
+    width: 0;
+    background-color: var(--input-color);
+    font-size: calc(var(--circle-size) * .19);
+    color: coral;
+    outline: none;
+    border: 0 none;
+    transition: width 500ms ease;
+}
+.search-container input[type="text"]::placeholder {
+    color: var(--input-placeholder-color);
+}
+.search-container .search-field::before,
+.search-container .search-field::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: var(--input-height);
+    width: var(--input-height);
+    background-color: var(--input-color);
+    border-radius: 50%;
+    z-index: -2;
+    cursor: text;
+}
+.search-container .search-field::before {
+    left: calc(var(--input-height) * -.5);
+}
+.search-container .search-field::after {
+    right: calc(var(--input-height) * -.5);
+}
+.search-container label .search-toggle::before,
+.search-container label .search-toggle::after {
+    content: '';
+    position: absolute;
+    height: var(--cross-size);
+    width: calc(var(--cross-size) / 5);
+    background-color: var(--cross-color);
+    z-index: 1;
+    transition: all 500ms ease;
+}
+.search-container label .search-toggle::after {
+    top: 50%;
+    left: 62.5%;
+    transform: translateX(-50%) rotate(-35deg);
+    border-radius: calc(var(--cross-size) * .1);
+}
+.search-container label .search-toggle::before {
+    width: var(--cross-size);
+    top: calc(50% - calc(var(--cross-size) * .9));
+    left: calc(62.5% - calc(var(--cross-size) * .7));
+    transform: translateX(-50%) rotate(-35deg);
+    border-radius: 50%;
+}
+
