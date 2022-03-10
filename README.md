@@ -10,7 +10,7 @@
 회원가입, 로그인, 프로필 업데이트, 게시물 삭제, 검색툴바       
  <br/>
     
-## 작동 영상
+## 데모 영상 (&#8595; click!)
 [![모두의 축제](http://img.youtube.com/vi/7fQ4U4fCyAg/0.jpg)](https://www.youtube.com/watch?v=7fQ4U4fCyAg)   
 
 
